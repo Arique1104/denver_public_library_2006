@@ -24,4 +24,12 @@ class Library
     end: sorted_books.last.publication_year}
   end
 
+  # The `checkout` method takes a `Book` as an argument. It should return `false` if a `Book` does not exist in the library or it is already checked out. Otherwise, it should return true indicating that the book has been checked out.
+  #
+  # The `checked_out_books` method should return an array of books that are currently checked out.
+  #
+  # The `return` method takes a `Book` as an argument. Calling this method means that a book is no longer checked out.
+  #
+  # The `most_popular_book` method should return the book that has been checked out the most.
+
 end
