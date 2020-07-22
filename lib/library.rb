@@ -24,6 +24,12 @@ class Library
     end: sorted_books.last.publication_year}
   end
 
+  def checkout(book)
+    @books.any? do |book|
+      book == book
+    end
+  end
+
   # The `checkout` method takes a `Book` as an argument. It should return `false` if a `Book` does not exist in the library or it is already checked out. Otherwise, it should return true indicating that the book has been checked out.
   #
   # The `checked_out_books` method should return an array of books that are currently checked out.
