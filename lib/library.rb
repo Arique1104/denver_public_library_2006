@@ -6,6 +6,7 @@ class Library
     @name = name
     @books = []
     @authors = []
+    @checked_out_books = []
   end
 
   def add_author(author)
@@ -25,10 +26,15 @@ class Library
   end
 
   def checkout(book)
-    @books.any? do |book|
+    @books.find do |book|
       book == book
     end
   end
+
+  def checked_out_books
+    require "pry"; binding.pry
+  end
+
 
   # The `checkout` method takes a `Book` as an argument. It should return `false` if a `Book` does not exist in the library or it is already checked out. Otherwise, it should return true indicating that the book has been checked out.
   #
