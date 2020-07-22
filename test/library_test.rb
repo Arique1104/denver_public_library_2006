@@ -51,6 +51,9 @@ class LibraryTest < Minitest::Test
     assert_equal [charlotte_bronte, harper_lee], dpl.authors
     # => [#<Author:0x00007fbeea2d78b8...>, #<Author:0x00007fbeea112730...>]
 
+    assert_equal 4, dpl.books.count
+    # => [#<Book:0x00007fbeeb3beca8...>, #<Book:0x00007fbeea8efd90...>, #<Book:0x00007fbeea24fbe8...>, #<Book:0x00007fbeeb1089f0...>]
+
   end
 
 end
