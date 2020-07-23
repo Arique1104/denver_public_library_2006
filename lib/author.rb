@@ -9,13 +9,14 @@ class Author
   def write(title, publication_year)
     author_array = @name.gsub(/\s+/m, ' ').strip.split(" ")
 
-      @books << Book.new({
+      book = Book.new({
       author_first_name: author_array[0],
       author_last_name: author_array[1],
       publication_date: publication_year,
       title: title
       })
-
+      @books << book
+      book
   end
 
 

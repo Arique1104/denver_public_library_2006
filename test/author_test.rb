@@ -24,7 +24,7 @@ class AuthorTest < Minitest::Test
     charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
 
     charlotte_bronte.write("Jane Eyre", "October 16, 1847")
-    
+
 
   end
 
@@ -34,12 +34,15 @@ class AuthorTest < Minitest::Test
     assert_equal [], charlotte_bronte.books
 
 
-    charlotte_bronte.write("Jane Eyre", "October 16, 1847")
+    jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
+    assert_equal Book, jane_eyre.class
+
+    assert_equal "Jane Eyre", jane_eyre.title
 
     charlotte_bronte.write("Villette", "1853")
 
     assert_equal 2, charlotte_bronte.books.count
-    assert_equal Array, charlotte_bronte.books.class
+
 
   end
 
